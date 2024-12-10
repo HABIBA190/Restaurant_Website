@@ -1,0 +1,229 @@
+ /* Custom styles for nested dropdowns */
+ .dropdown-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    
+  }
+
+  .dropdown-menu > .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+  nav{
+      list-style: none;
+  }
+  .butn{
+  background-color: rgba(139, 0, 0, 0.766);
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  margin-left: 100%;
+  
+}
+.butn:hover{
+  background-color: rgb(173, 2, 2);
+  width: 180px;
+  
+  
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(173, 2, 2);
+    border-radius: 50px;
+}
+
+/* Reservation Form */
+
+
+.booking{
+    background-image: url(images/RESERVATION2.jpg);
+    background-position: center;
+} 
+
+.form_group{
+    color: black;
+    margin: 37px;
+    font-size: 17px;
+    font-weight: 500;   
+}
+.btn{
+    background-color: rgba(139, 0, 0, 0.766);
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    
+    
+}
+.btn:hover{
+    background-color: rgb(173, 2, 2);
+    width: 250px;
+    color: white;
+    
+    
+}
+
+
+
+/* cart */
+
+/* style.css */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.container {
+    transition: transform .5s;
+}
+
+header .icon-cart {
+    position: relative;
+}
+
+.icon-cart span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: -5px;
+}
+
+.icon-cart .bi-cart {
+    font-size: 40px;
+    position: relative;
+}
+
+.carttab {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+.carttab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+body.showcart .carttab {
+    inset: 0 0 0 auto;
+}
+
+body.showcart .container {
+    transform: translateX(-250px);
+}
+
+.carttab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.carttab .btn button {
+    background-color: rgb(238, 143, 18);
+    border: none;
+    font-family: poppins;
+    cursor: pointer;
+}
+
+.carttab .btn .close {
+    background-color: #eee;
+}
+
+.carttab .listcart .item img {
+    width: 60px;
+}
+
+.carttab .listcart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listcart .quantity span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    color: tomato;
+    cursor: pointer;
+}
+
+.listcart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    font-size: 20px;
+}
+
+.listcart .quantity span:nth-child(1),
+.listcart .quantity span:nth-child(3) {
+    font-size: 20px;
+}
+
+.listcart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+.listcart {
+    overflow: auto;
+}
+
+.listcart::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width:800px){
+    ul{
+        flex-direction: column;
+    }
+    ul li{
+        flex-direction: row;
+    }
+    ul li .progress{
+        margin: 0 30px ;
+    }
+    .progress::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    ul li .icon{
+        margin: 15px 0 ;
+    }
+}
+@media (max-width:600px){
+    head .head_1{
+        font-size: 24px;
+    }
+}
